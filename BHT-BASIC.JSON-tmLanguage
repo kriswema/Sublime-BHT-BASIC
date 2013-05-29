@@ -1,0 +1,58 @@
+{
+    "name": "BHT-BASIC",
+    "scopeName": "source.bht",
+    "fileTypes": ["src", "ls4", "lst"],
+    "patterns": [
+        {
+            "comment": "Functions",
+            "match": "(?i:\\b(ABS|APLOAD|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|PRIVATE|PUBLIC|READ|RESTORE|RESUME|SCREEN|SEARCH|STATIC|VAL|WAIT|XFILE|('|REM)\\s*\\$INCLUDE:\\s*'.*')\\b)",
+            "name": "support.function.basic.bht"
+        },
+        {
+            "comment": "Functions",
+            "match": "(?i:\\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\\s?#?)\\b)",
+            "name": "support.function.basic.bht"
+        },
+        {
+            "comment": "Functions",
+            "match": "(?i:\\b((MID|INKEY|INPUT|STR)\\$))",
+            "name": "support.function.basic.bht"
+        },
+        {
+            "comment": "Control Structures",
+            "match": "(?i:\\b(((END(\\s)?)?(FUNCTION|IF|SELECT|SUB))|((GO(\\s)?)(SUB|TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\\b)",
+            "name": "keyword.control.bht"
+        },
+        {
+            "comment": "Strings",
+            "match": "\".*\"",
+            "name": "string.quoted.double.bht"
+        },
+        {
+            "comment": "Variables",
+            "match": "\\b([a-zA-Z\\d]+(\\$|%|&))\\s*(\\[\\d+\\])?",
+            "name": "variable.other.bht"
+        },
+        {
+            "comment": "Digits",
+            "match": "(\\b\\d+|&h\\w+)\\b",
+            "name": "constant.numeric.bht"
+        },
+        {
+            "comment": "Operators",
+            "match": "(\\*|/|\\+|-|=|<>|><|<|>|<=|>=|=<|=>|:|,|;|\\(|\\)|\\[|\\])",
+            "name": "keyword.operator.bht"
+        },
+        {
+            "comment": "Operators (spaces needed)",
+            "match": "(?i:\\b(MOD|NOT|AND|OR|XOR|AS|TO)\\b)",
+            "name": "keyword.operator.bht"
+        },
+        {
+            "begin": "(?i:'|REM)",
+            "end": "(?=(\\n|\\r))",
+            "name": "comment.line.apostrophe.bht"
+        }
+    ],
+    "uuid": "1509dea0-11e1-48ad-8c52-6fc88ba8c839"
+}

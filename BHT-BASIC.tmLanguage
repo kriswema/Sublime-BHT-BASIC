@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>src</string>
+		<string>ls4</string>
+		<string>lst</string>
+	</array>
+	<key>name</key>
+	<string>BHT-BASIC</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>(?i:\b(ABS|APLOAD|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|PRIVATE|PUBLIC|READ|RESTORE|RESUME|SCREEN|SEARCH|STATIC|VAL|WAIT|XFILE|('|REM)\s*\$INCLUDE:\s*'.*')\b)</string>
+			<key>name</key>
+			<string>support.function.basic.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>(?i:\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\s?#?)\b)</string>
+			<key>name</key>
+			<string>support.function.basic.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>(?i:\b((MID|INKEY|INPUT|STR)\$))</string>
+			<key>name</key>
+			<string>support.function.basic.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Control Structures</string>
+			<key>match</key>
+			<string>(?i:\b(((END(\s)?)?(FUNCTION|IF|SELECT|SUB))|((GO(\s)?)(SUB|TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\b)</string>
+			<key>name</key>
+			<string>keyword.control.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Strings</string>
+			<key>match</key>
+			<string>".*"</string>
+			<key>name</key>
+			<string>string.quoted.double.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Variables</string>
+			<key>match</key>
+			<string>\b([a-zA-Z\d]+(\$|%|&amp;))\s*(\[\d+\])?</string>
+			<key>name</key>
+			<string>variable.other.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Digits</string>
+			<key>match</key>
+			<string>(\b\d+|&amp;h\w+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Operators</string>
+			<key>match</key>
+			<string>(\*|/|\+|-|=|&lt;&gt;|&gt;&lt;|&lt;|&gt;|&lt;=|&gt;=|=&lt;|=&gt;|:|,|;|\(|\)|\[|\])</string>
+			<key>name</key>
+			<string>keyword.operator.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Operators (spaces needed)</string>
+			<key>match</key>
+			<string>(?i:\b(MOD|NOT|AND|OR|XOR|AS|TO)\b)</string>
+			<key>name</key>
+			<string>keyword.operator.bht</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i:'|REM)</string>
+			<key>end</key>
+			<string>(?=(\n|\r))</string>
+			<key>name</key>
+			<string>comment.line.apostrophe.bht</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.bht</string>
+	<key>uuid</key>
+	<string>1509dea0-11e1-48ad-8c52-6fc88ba8c839</string>
+</dict>
+</plist>
