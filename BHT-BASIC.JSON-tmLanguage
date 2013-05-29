@@ -25,7 +25,7 @@
         },
         {
             "comment": "Strings",
-            "match": "\".*\"",
+            "match": "\"[^\"]*\"",
             "name": "string.quoted.double.bht"
         },
         {
