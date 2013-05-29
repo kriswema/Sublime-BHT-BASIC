@@ -16,7 +16,7 @@
 			<key>comment</key>
 			<string>Functions</string>
 			<key>match</key>
-			<string>(?i:\b(ABS|APLOAD|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|PRIVATE|PUBLIC|READ|RESTORE|RESUME|SCREEN|SEARCH|STATIC|VAL|WAIT|XFILE|('|REM)\s*\$INCLUDE:\s*'.*')\b)</string>
+			<string>(?i:\b(ABS|APLOAD|ASC|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|READ|RESTORE|RESUME|SCREEN|SEARCH|VAL|WAIT|XFILE|('|REM)\s*\$INCLUDE:\s*'.*')(?!\$)\b)</string>
 			<key>name</key>
 			<string>support.function.basic.bht</string>
 		</dict>
@@ -24,7 +24,15 @@
 			<key>comment</key>
 			<string>Functions</string>
 			<key>match</key>
-			<string>(?i:\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\s?#?)\b)</string>
+			<string>(?i:\b(PRIVATE|PUBLIC|STATIC)(?!\$)\b)</string>
+			<key>name</key>
+			<string>support.type.bht</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>(?i:\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\s?#?)(?!\$)\b)</string>
 			<key>name</key>
 			<string>support.function.basic.bht</string>
 		</dict>
@@ -32,7 +40,7 @@
 			<key>comment</key>
 			<string>Functions</string>
 			<key>match</key>
-			<string>(?i:\b((MID|INKEY|INPUT|STR)\$))</string>
+			<string>(?i:\b((COUNTRY|MID|INKEY|INPUT|STR|TIME)\$))</string>
 			<key>name</key>
 			<string>support.function.basic.bht</string>
 		</dict>
@@ -40,7 +48,7 @@
 			<key>comment</key>
 			<string>Control Structures</string>
 			<key>match</key>
-			<string>(?i:\b(((END(\s)?)?(FUNCTION|IF|SELECT|SUB))|((GO(\s)?)(SUB|TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\b)</string>
+			<string>(?i:\b(((END(\s)?)?(FUNCTION|IF|SELECT|SUB))|(GO(SUB|(\s)?TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\b)</string>
 			<key>name</key>
 			<string>keyword.control.bht</string>
 		</dict>

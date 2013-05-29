@@ -5,22 +5,27 @@
     "patterns": [
         {
             "comment": "Functions",
-            "match": "(?i:\\b(ABS|APLOAD|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|PRIVATE|PUBLIC|READ|RESTORE|RESUME|SCREEN|SEARCH|STATIC|VAL|WAIT|XFILE|('|REM)\\s*\\$INCLUDE:\\s*'.*')\\b)",
+            "match": "(?i:\\b(ABS|APLOAD|ASC|BEEP|CALL|CHAIN|CLS|COMMON|CONST|CURSOR|DATA|DECLARE|DEFREG|DIM|ERASE|FRE|GLOBAL|INSTR|KEY|KEY OFF|KEY ON|KILL|KPLOAD|LEN|LET|LINE INPUT|LOCATE|LOF|OPEN|OUT|POWER|PRINT USING|READ|RESTORE|RESUME|SCREEN|SEARCH|VAL|WAIT|XFILE|('|REM)\\s*\\$INCLUDE:\\s*'.*')(?!\\$)\\b)",
             "name": "support.function.basic.bht"
         },
         {
             "comment": "Functions",
-            "match": "(?i:\\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\\s?#?)\\b)",
+            "match": "(?i:\\b(PRIVATE|PUBLIC|STATIC)(?!\\$)\\b)",
+            "name": "support.type.bht"
+        },
+        {
+            "comment": "Functions",
+            "match": "(?i:\\b((CLFILE|CLOSE|FIELD|GET|INPUT|PRINT|PUT)\\s?#?)(?!\\$)\\b)",
             "name": "support.function.basic.bht"
         },
         {
             "comment": "Functions",
-            "match": "(?i:\\b((MID|INKEY|INPUT|STR)\\$))",
+            "match": "(?i:\\b((COUNTRY|MID|INKEY|INPUT|STR|TIME)\\$))",
             "name": "support.function.basic.bht"
         },
         {
             "comment": "Control Structures",
-            "match": "(?i:\\b(((END(\\s)?)?(FUNCTION|IF|SELECT|SUB))|((GO(\\s)?)(SUB|TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\\b)",
+            "match": "(?i:\\b(((END(\\s)?)?(FUNCTION|IF|SELECT|SUB))|(GO(SUB|(\\s)?TO))|(CASE|DEF FN|ELSE|END DEF|EXIT SUB|FOR|NEXT|ON|ON ERROR GOTO|ON KEY|RETURN|SELECT CASE|THEN|WEND|WHILE))\\b)",
             "name": "keyword.control.bht"
         },
         {
